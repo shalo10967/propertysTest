@@ -1,0 +1,150 @@
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3e9f0 100%);
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.2);
+}
+
+.feature-card:active {
+  transform: translateY(-4px);
+}
+
+.feature-card.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.feature-card.disabled:hover {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.feature-card.disabled .feature-icon {
+  filter: grayscale(100%);
+}
+
+.feature-card h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover h3 {
+  color: #0056b3;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.feature-arrow {
+  display: inline-block;
+  font-size: 24px;
+  color: #007bff;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-arrow {
+  transform: translateX(8px);
+}
+
+.feature-card.disabled .feature-arrow {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .feature-icon {
+    font-size: 40px;
+  }
+}
+

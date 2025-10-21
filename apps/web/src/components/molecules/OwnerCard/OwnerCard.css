@@ -1,0 +1,64 @@
+.owner-card {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.owner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.owner-photo-container {
+  margin-bottom: 15px;
+}
+
+.owner-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.owner-card:hover .owner-photo {
+  transform: scale(1.05);
+  border-color: #0056b3;
+}
+
+.owner-info {
+  width: 100%;
+}
+
+.owner-name {
+  color: #333;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+.owner-detail {
+  margin: 8px 0;
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.owner-detail strong {
+  font-size: 16px;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
